@@ -3,7 +3,7 @@ Get statistical information regarding temperatures and dew points at various wea
 
 # Motivation
 To allow for more advanced probabilistic analysis of extreme temperature likelihoods, as well as additional statistical information
-that is not normally available elsewhere.  Get 10th to 90th percentile dew point ranges for various time periods.  Also provides a speedy way to switch between various stations and get a detailed sense of their temperature trends, with all the features in one consolidated module.
+that is not normally available elsewhere.  Get tenth to ninetieth percentile dew point ranges for various time periods.  Also provides a speedy way to switch between various stations and get a detailed sense of their temperature trends, with all the features in one consolidated module.
 
 # Code Style
 C Standard
