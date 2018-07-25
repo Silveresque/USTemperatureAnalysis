@@ -94,7 +94,10 @@ Dew Point (degrees Fahrenheit) | Perception
       <35 | Dry
       
 As you can see, the same relative humidity at variuos temperatures can yield vastly different actual amounts of moisture.  Thereofre, dew point, a variable that instead is based on the actual amount of moisture, is a better indicator of perception.  
- 
+
+#Usage
+To compile and run the program, download all of the files in this repository (Screenshots folder is not necessary), create a project in an integrated development environment with a C compiler such as Visual Studio or Code:Blocks.  Create a new project, then add all .c and .h files to the project.  Maintain all files in the same relative location as present in the Github repository.
+
 # Works Cited
 Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012:  An overview
 of the Global Historical Climatology Network - Daily Database.  Journal of Atmospheric
