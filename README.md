@@ -60,7 +60,7 @@ Example: The probability of seeing a 100 degree day (or greater) at a location i
 ## Dew Point Information
 Dew point is often a better indicator of humidity as humany perceived, compared to relative humidity.  This is because, dew points evaluate the actual amount of moisture in the air, whereas relative humidity indicates how much moisture is in the air relative to how much can be present.  For example, 50% relative humidity at 90 degrees fahrenheit yields a dew point of 69 degrees, but 50% relative humidity at 50 degrees yields a dew point of 32 degrees.  Here's an idea of how various dew points are perceived by the average person:
 
-Dew Point | Perception
+Dew Point (degrees fahrenheit) | Perception
 
       >75 | Amazon Rainforest
       
