@@ -8,7 +8,7 @@ that is not normally available elsewhere.  Get 10th to 90th percentile dew point
 # Code Style
 C Standard
 
-# S#oftware Development Kit
+# Software Development Kit
 Windows 10 SDK
 
 # Platform Toolset
