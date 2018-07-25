@@ -1,21 +1,21 @@
-##U.S. Temperature Analysis
+## U.S. Temperature Analysis
 Get statistical information regarding temperatures and dew points at various weather stations across the United States.
 
-##Motivation
+## Motivation
 To allow for more advanced probabilistic analysis of extreme temperature likelihoods, as well as additional statistical information
 that is not normally available elsewhere.  Also provides a speedy way to switch between various stations and get a detailed sense of
 their temperature trends, with all the features in one consolidated module.
 
-##Code Style
+## Code Style
 C Standard
 
-##S#oftware Development Kit
+## S#oftware Development Kit
 Windows 10 SDK
 
-##Platform Toolset
+## Platform Toolset
 Visual Studio 2017
 
-##Features
+## Features
 Yearly and Monthly History Lookup
 
 Record and Mean Extrema Tables
@@ -36,7 +36,7 @@ Daily Dew Points
 
 Hourly Dew Points
 
-##Works Cited
+## Works Cited
 Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012:  An overview
 of the Global Historical Climatology Network - Daily Database.  Journal of Atmospheric
 and Oceanic Technology, 29, 897 - 910, doi:10.1175 / JTECH - D - 11 - 00103.1.
@@ -54,5 +54,5 @@ Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungan
 NOAA's U.S. Climate Normals (1981-2010). Temperature.
 NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP 9 Jul. 2018.
 
-##Authors
+## Authors
 Sean Datta
