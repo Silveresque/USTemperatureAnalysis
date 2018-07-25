@@ -12,8 +12,8 @@ static int key_match(char *dynamic_string, const char *key, int key_length);
 static int locate_key(char *dynamic_string, const char *key, int dyamic_string_length, int key_length);
 static void grow_dynamic_string(char **dynamic_string, int dynamic_string_length, int diff);
 static void make_room(char **dynamic_string, int dynamic_string_length, int key_location, int key_length, int diff);
-static void replace(char *dynamic_string, const char *str, int str_length, int key_location);
-static void gap_close(char *dynamic_string, int dynamic_string_length, int key_location, int str_length, int diff);
+static void replace(char **dynamic_string, const char *str, int str_length, int key_location);
+static void gap_close(char **dynamic_string, int dynamic_string_length, int key_location, int str_length, int diff);
 // helper functions for bucket_sort()
 static int *create_bucket(int *arr, int size, int range_length, int min);
 static void refill_arr(int *arr, int *bucket, int range_length, int min);
@@ -68,44 +68,44 @@ static void make_room(char **dynamic_string, int dynamic_string_length, int key_
 }
 
 // plants 'str' at 'key_location' in 'dynamic_string'
-static void replace(char *dynamic_string, const char *str, int str_length, int key_location) {
+static void replace(char **dynamic_string, const char *str, int str_length, int key_location) {
 	if (str == NULL || str_length <= 0)
 		return;
 	
 	int i;
 	for (i = 0; i < str_length; i++)
-		*(dynamic_string + key_location + i) = *(str + i);
+		*(*dynamic_string + key_location + i) = *(str + i);
 }
 
 // shortens 'dynamic_string' by diff
-static void gap_close(char *dynamic_string, int dynamic_string_length, int key_location, int str_length, int diff) {
+static void gap_close(char **dynamic_string, int dynamic_string_length, int key_location, int str_length, int diff) {
 	if (diff >= 0)
 		return;
 	
 	int i;
 	for (i = key_location + str_length; i < dynamic_string_length; i++)
-		*(dynamic_string + i) = *(dynamic_string + i - diff);
+		*(*dynamic_string + i) = *(*dynamic_string + i - diff);
 
-	*(dynamic_string + dynamic_string_length + diff) = '\0';	
+	*(*dynamic_string + dynamic_string_length + diff) = '\0';	
 }
 
 // replaces all occurrences of 'key' in 'dynamic_string' with 'str'
-void replace_key(char *dynamic_string, const char *key, const char *str) {
+void replace_key(char **dynamic_string, const char *key, const char *str) {
     if (dynamic_string == NULL || key == NULL || str == NULL)
         return;
 
     // key_location set to -1 by default - represents no occurrences of 'key' in 'dynamic_string'
     int key_location = -1, key_length = strlen(key);
     int str_length = strlen(str);
-    int dynamic_string_length = strlen(dynamic_string), diff = str_length - key_length;
+    int dynamic_string_length = strlen(*dynamic_string), diff = str_length - key_length;
 
     // inspect from each character for an occurrence of 'key'
-	key_location = locate_key(dynamic_string, key, dynamic_string_length, key_length);
+	key_location = locate_key(*dynamic_string, key, dynamic_string_length, key_length);
 	if (key_location == -1)
 		return;
 
 	// key replacement process
-	make_room(&dynamic_string, dynamic_string_length, key_location, key_length, diff);
+	make_room(dynamic_string, dynamic_string_length, key_location, key_length, diff);
 	replace(dynamic_string, str, str_length, key_location);
 	gap_close(dynamic_string, dynamic_string_length, key_location, str_length, diff);
 

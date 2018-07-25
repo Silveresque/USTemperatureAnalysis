@@ -12,7 +12,7 @@
 
 // helper functions for select_station()
 static void select_state(char *state);
-static void format_station_name(char *station_name_string);
+static void format_station_name(char **station_name_string);
 static int line_matches_state(char *line, char *state);
 static char *create_dynamic_string(int size);
 static void capture_WBAN(char *line, char *station_WBAN);
@@ -41,7 +41,7 @@ static void select_state(char *state) {
 }
 
 // formatting station names using replaceStr()
-static void format_station_name(char *station_name_string) {
+static void format_station_name(char **station_name_string) {
 	replace_key(station_name_string, " AAF ", " ARMY AIR FORCE ");
 	replace_key(station_name_string, " AFB ", " AIR FORCE BASE ");
 	replace_key(station_name_string, " AP ", " AIRPORT ");
@@ -82,9 +82,9 @@ static void capture_WBAN(char *line, char *station_WBAN) {
 }
 
 static void capture_staiton_name(char *line, char *station_name_string) {
-	station_name_string[0] = 32;
+	station_name_string[0] = ' ';
 	strncpy(station_name_string + 1, line + 41, 31);
-	station_name_string[32] = 32;
+	station_name_string[32] = ' ';
 	station_name_string[33] = '\0';
 }
 
@@ -92,9 +92,10 @@ static void add_station(char *line, char *station_WBAN, node **station_bst) {
 	char *station_name_string = create_dynamic_string(STATION_NAME_LENGTH);
 	capture_WBAN(line, station_WBAN);
 	capture_staiton_name(line, station_name_string);
-	format_station_name(station_name_string);
+	format_station_name(&station_name_string);
 	*station_bst = BST_insert(*station_bst, station_name_string, station_WBAN);
 	free(station_name_string);
+	station_name_string = NULL;
 }
 
 static void compile_station_list(node **station_bst, char *state) {

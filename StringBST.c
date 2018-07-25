@@ -29,20 +29,20 @@ node *create_node(char *data, char *WBAN) {
 
 // recursively insert a node
 node *BST_insert(node *root, char *data, char *WBAN) {
-    if (data == NULL)
-        return root;
+	 if (data == NULL)
+	 return root;
 
-    // if at the location or no nodes exist, return the pointer to a newly created node
-    if (root == NULL)
-        return create_node(data, WBAN);
+	 // if at the location or no nodes exist, return the pointer to a newly created node
+	 if (root == NULL)
+	 return create_node(data, WBAN);
 
-    // based on listyCmp (similar to strcmp()) insert to the left or right relative to the current node
-    if (strcmp(data, root->data) < 0)
-        root->left = BST_insert(root->left, data, WBAN);
-    else
-        root->right = BST_insert(root->right, data, WBAN);
+	 // based on strcmp(), insert to the left or right relative to the current node
+	 if (strcmp(data, root->data) < 0)
+	 root->left = BST_insert(root->left, data, WBAN);
+	 else
+	 root->right = BST_insert(root->right, data, WBAN);
 
-    return root;
+	 return root;
 }
 
 // recursively search for a node given its position
@@ -76,7 +76,7 @@ static void inorder_recursive_helper(node *root, int *counter) {
     inorder_recursive_helper(root->left, counter);
 
     // increment counter and assign to the node's position field
-    // print the ListyString and its position
+    // print the string and its position
     *counter += 1;
     printf("%3d -", *counter);
     printf("%s", root->data);

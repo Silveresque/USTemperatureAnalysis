@@ -16,7 +16,7 @@ typedef struct {
 	int year;
 } RecordMinimum;
 
-void replace_key(char *dynamic_string, const char *key, const char *str);
+void replace_key(char **dynamic_string, const char *key, const char *str);
 void bucket_sort(int *arr, int size);
 int is_int(char *str);
 int to_int(char *str);
