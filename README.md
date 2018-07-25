@@ -52,7 +52,7 @@ Visual Studio 2017
 ![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/dewp-hourly.png)
 
 ## Climate Normals
-Climate Normals are traditionally understood as a 30-year average of any climatological variable, using the most recent three copmlete decades.  Sometimes, additional steps may be conducted in determining these averages, especially if data is incomplete.  An example of referencing a climate normal is this: "The normal high temperature in January at Orlando International Airport is 71.2 degrees Fahrenheit." The last sentence indicates that 71.2 degrees Fahrenheit is understood to be the average high temperature in January at Orlando International Airport.  
+Climate Normals are traditionally understood as 30-year average of any climatological variable, using the most recent three copmlete decades.  Sometimes, additional steps may be conducted in determining these averages, especially if data is incomplete.  An example of referencing a climate normal is this: "The normal high temperature in January at Orlando International Airport is 71.2 degrees Fahrenheit." The last sentence indicates that 71.2 degrees Fahrenheit is understood to be the average high temperature in January at Orlando International Airport.  
 
 ## Gumbel Probability Distribution
 The gumbel probability distribution is used to evaluate probabilities and percentiles for maximums and minimums in a specific month or the whole year.  
