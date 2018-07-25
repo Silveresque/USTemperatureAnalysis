@@ -3,8 +3,7 @@ Get statistical information regarding temperatures and dew points at various wea
 
 ## Motivation
 To allow for more advanced probabilistic analysis of extreme temperature likelihoods, as well as additional statistical information
-that is not normally available elsewhere.  Also provides a speedy way to switch between various stations and get a detailed sense of
-their temperature trends, with all the features in one consolidated module.
+that is not normally available elsewhere.  Get 10th to 90th percentile dew point ranges for various time periods.  Also provides a speedy way to switch between various stations and get a detailed sense of their temperature trends, with all the features in one consolidated module.
 
 ## Code Style
 C Standard
@@ -16,26 +15,61 @@ Windows 10 SDK
 Visual Studio 2017
 
 ## Features
-Yearly and Monthly History Lookup
+# Yearly and Monthly History Lookup
 
-Record and Mean Extrema Tables
+# Record and Mean Extrema Tables
 
-Percentile Tables
+# Percentile Tables
 
-Daily Normals
+# Daily Normals
 
-Hourly Normals
+# Hourly Normals
 
-Probability of Extreme Temperatures
+# Probability of Extreme Temperatures
 
-Simulation of Maximum and Minimum Temperatures in a Month or Whole Year
+# Simulation of Maximum and Minimum Temperatures in a Month or Whole Year
 
-Dew Point Annual Summary
+# Dew Point Annual Summary
 
-Daily Dew Points
+# Daily Dew Points
 
-Hourly Dew Points
+# Hourly Dew Points
 
+# Gumbel Distribution
+The gumbel probability distribution is used to evaluate probabilities and percentiles for maximums and minimums in a specific month or the whole year.  
+
+A probability density function (pdf) produces a contiuous curve on the graph that specifies different probabilities (y-values) for corresponding values (x-values).  Because dx, or the change in x, can be infinitely small, the probability of a specific value will always be 0.  Therefore, probabilites from a (pdf) are typically evaluated by integrating over the pdf over a certain range and calculating the area under the curve in that range.  
+
+For example, the probability of a value between 60 and 70 occurring in a probability distribution, could be evaluated by taking the definite integral of its pdf from x = 60 to x = 70.
+
+The cumultaive distribution function (cdf), derived from the pdf, calculates the probability of an occurrence less than (the "or equal to" distintion becomes interchangeable and negllibile due to the nature of pdf's explianed above) a specified value.  Therefore, the cdf is derived by evaluating the definite integral from negative infinity to x of the pdf.  As an example, to evaluate the probability of the occurrence of a value less than 40 in a probability distribution, the cdf evaluated at 40 would calculate this probability.
+
+The survival function is the opposite of the cdf, calculating the probaiblity of an occurrence greater than ( and optionally "or equal to") a specified value.  If the probability of event A is p, the probability of event A' is 1 - p.  Therefore, the survival function is simply equal to 1 minus the cdf.  As an example, to evaluate the probability of the occurrence of a value greater than 80 in a probability distribution, the survival function evaluated at 80 would calculate this probability.
+
+For the purposes of this project, the distinction betwen cdf and survival function is not made.  In this project, the cdf of the maximum gumbel evaluated at x, outputs the probability of occurrence x or greater.  The cdf of the minimum gumbel evaluated at x, outputs the probability of occurrence x or lower.
+
+Gumbel distributions are used to calculate probabilities such as, "What is the probability of seeing a temperature 100 degrees fahrenheit in July?" The maximum gumbel cdf (survival function behind the scenes) evaluated at 100 is used for such a calculation.  This outputs the probability of seeing a temperature value 100 or greater, which is the desired result, as the occurrence of any greater temperature value will include the occurrence of 100 degrees (for example, an occurrence of 104 degrees had to pass 100 degrees in an upward direction).  Probabilities like, "What is the probability of seeing a temperature 0 degrees fahrenheit in January?" are evaluated similarly, but by using the cdf of the minimum gumbel.
+
+Taking the inverse of these functions is used to generate a value given a percentile.  This is used for the simulation features in this project, by generating random percentiles and plugging them into these inverse functions.  
+
+GEOMETRIC PROBABILITY DISTRIBUTION APPLICATION
+In this project, gumbel distributions are used to evaluate the probabilities of certain temperature values occurring in one month or one year.  By calculating the probability of occurrence in one period, we can then use this as the p-value for the well-known geometric distribution, which can then be used to calculate the probability of the value's occurrence over multiple periods.
+
+Example: The probability of seeing a 100 degree day (or greater) at a location in one July is 25% (and thus the probability of not seeing its ocucurrence in one July is 75%).  Using the geometric distribution, the probability of seeing a 100 degree day at a location at least once in 5 July's is 1 - 0.75^5 (1 minus the probability of not seeing at all in each of the 5 years) is 76%.  This concept is used to calculate the 1-, 5-, 10-, 15-, 20-, and 25-year probabilities of the occurrence of extreme temperature values.
+
+# Dew Point Information
+Dew point is often a better indicator of humidity as humany perceived, compared to relative humidity.  This is because, dew points evaluate the actual amount of moisture in the air, whereas relative humidity indicates how much moisture is in the air relative to how much can be present.  For example, 50% relative humidity at 90 degrees fahrenheit yields a dew point of 69 degrees, but 50% relative humidity at 50 degrees yields a dew point of 32 degrees.  Here's an idea of how various dew points are perceived by the average person:
+
+Dew Point | Perception
+      >75 | Amazon Rainforest
+       70 | Very Humid
+       60 | Humid
+       50 | Comfortable
+       40 | Brisk
+      <35 | Dry
+      
+As you can see, the same relative humidity at variuos temperatures can yield vastly different actual amounts of moisture.  Thereofre, dew point, a variable that instead is based on the actual amount of moisture, is a better indicator of perception.  
+ 
 ## Works Cited
 Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012:  An overview
 of the Global Historical Climatology Network - Daily Database.  Journal of Atmospheric
