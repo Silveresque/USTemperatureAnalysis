@@ -64,7 +64,7 @@ The survival function is the opposite of the cdf, calculating the probaiblity of
 
 For the purposes of this project, the distinction betwen cdf and survival function is not made.  In this project, the cdf of the maximum gumbel evaluated at x, outputs the probability of occurrence x or greater.  The cdf of the minimum gumbel evaluated at x, outputs the probability of occurrence x or lower.
 
-Gumbel distributions are used to calculate probabilities such as, "What is the probability of seeing a temperature 100 degrees fahrenheit in July?" The maximum gumbel cdf (survival function behind the scenes) evaluated at 100 is used for such a calculation.  This outputs the probability of seeing a temperature value 100 or greater, which is the desired result, as the occurrence of any greater temperature value will include the occurrence of 100 degrees (for example, an occurrence of 104 degrees had to pass 100 degrees in an upward direction).  Probabilities like, "What is the probability of seeing a temperature 0 degrees fahrenheit in January?" are evaluated similarly, but by using the cdf of the minimum gumbel.
+Gumbel distributions are used to calculate probabilities such as, "What is the probability of seeing a temperature 100 degrees Fahrenheit in July?" The maximum gumbel cdf (survival function behind the scenes) evaluated at 100 is used for such a calculation.  This outputs the probability of seeing a temperature value 100 or greater, which is the desired result, as the occurrence of any greater temperature value will include the occurrence of 100 degrees (for example, an occurrence of 104 degrees had to pass 100 degrees in an upward direction).  Probabilities like, "What is the probability of seeing a temperature 0 degrees Fahrenheit in January?" are evaluated similarly, but by using the cdf of the minimum gumbel.
 
 Taking the inverse of these functions is used to generate a value given a percentile.  This is used for the simulation features in this project, by generating random percentiles and plugging them into these inverse functions.  
 
@@ -74,9 +74,9 @@ In this project, gumbel distributions are used to evaluate the probabilities of 
 Example: The probability of seeing a 100 degree day (or greater) at a location in one July is 25% (and thus the probability of not seeing its ocucurrence in one July is 75%).  Using the geometric distribution, the probability of seeing a 100 degree day at a location at least once in 5 July's is 1 - 0.75^5 (1 minus the probability of not seeing at all in each of the 5 years) is 76%.  This concept is used to calculate the 1-, 5-, 10-, 15-, 20-, and 25-year probabilities of the occurrence of extreme temperature values.
 
 ## Dew Point Information
-Dew point is often a better indicator of humidity as humany perceived, compared to relative humidity.  This is because, dew points evaluate the actual amount of moisture in the air, whereas relative humidity indicates how much moisture is in the air relative to how much can be present.  For example, 50% relative humidity at 90 degrees fahrenheit yields a dew point of 69 degrees, but 50% relative humidity at 50 degrees yields a dew point of 32 degrees.  Here's an idea of how various dew points are perceived by the average person:
+Dew point is often a better indicator of humidity with regard to human perception, compared to relative humidity.  This is because dew points evaluate the actual amount of moisture in the air, whereas relative humidity indicates how much moisture is in the air relative to how much it can hold.  For example, 50% relative humidity at 90 degrees Fahrenheit yields a dew point of 69 degrees, but 50% relative humidity at 50 degrees yields a dew point of 32 degrees.  Here's an idea of how various dew points are perceived by the average person:
 
-Dew Point (degrees fahrenheit) | Perception
+Dew Point (degrees Fahrenheit) | Perception
 
       >75 | Amazon Rainforest
       
