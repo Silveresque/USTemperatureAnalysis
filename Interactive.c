@@ -561,6 +561,7 @@ void hourly_normals_in_day(History *history, HourlyNormals *hourly_normals) {
 	printf("10th Percentile to 90th Percentile Intervals\n\n");
 
 	print_hourly_summary(hourly_normals, TEMP, month, day);
+	printf("\n");
 
 	print_daily_record_extrema(history, month, day, MAX, HIGH);
 	print_daily_record_extrema(history, month, day, MAX, LOW);
