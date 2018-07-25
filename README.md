@@ -45,7 +45,7 @@ Visual Studio 2017
 ## Hourly Dew Points
 ![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Hourly%20Dew%20Point.png)
 
-## Gumbel Distribution
+## Gumbel Probability Distribution
 The gumbel probability distribution is used to evaluate probabilities and percentiles for maximums and minimums in a specific month or the whole year.  
 
 A probability density function (pdf) produces a contiuous curve on the graph that specifies different probabilities (y-values) for corresponding values (x-values).  Because dx, or the change in x, can be infinitely small, the probability of a specific value will always be 0.  Therefore, probabilites from a (pdf) are typically evaluated by integrating over the pdf over a certain range and calculating the area under the curve in that range.  
