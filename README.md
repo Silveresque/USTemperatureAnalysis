@@ -88,21 +88,34 @@ As you can see, the same relative humidity at variuos temperatures can yield vas
  
 # Works Cited
 Menne, M.J., I. Durre, R.S. Vose, B.E. Gleason, and T.G. Houston, 2012:  An overview
+
 of the Global Historical Climatology Network - Daily Database.  Journal of Atmospheric
+
 and Oceanic Technology, 29, 897 - 910, doi:10.1175 / JTECH - D - 11 - 00103.1.
 
 Menne, M.J., I.Durre, B.Korzeniewski, S.McNeal, K.Thomas, X.Yin, S.Anthony, R.Ray,
+
+
 R.S.Vose, B.E.Gleason, and T.G.Houston, 2012: Global Historical Climatology Network -
+
 Daily(GHCN - Daily), Version 3.25
+
 NOAA National Climatic Data Center.http ://doi.org/10.7289/V5D21VHZ 6 Jun. 2018.
 
-Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta(2010).
-NOAA's U.S. Climate Normals (1981-2010). Hourly.
-NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP 27 Dec. 2017.
 
 Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta(2010).
+
+NOAA's U.S. Climate Normals (1981-2010). Hourly.
+
+NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP 27 Dec. 2017.
+
+
+Anthony Arguez, Imke Durre, Scott Applequist, Mike Squires, Russell Vose, Xungang Yin, and Rocky Bilotta(2010).
+
 NOAA's U.S. Climate Normals (1981-2010). Temperature.
+
 NOAA National Centers for Environmental Information. DOI:10.7289/V5PN93JP 9 Jul. 2018.
+
 
 # Authors
 Sean Datta
