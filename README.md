@@ -62,7 +62,7 @@ Gumbel distributions are used to calculate probabilities such as, "What is the p
 
 Taking the inverse of these functions is used to generate a value given a percentile.  This is used for the simulation features in this project, by generating random percentiles and plugging them into these inverse functions.  
 
-GEOMETRIC PROBABILITY DISTRIBUTION APPLICATION
+### Geometric Probability Distribution
 In this project, gumbel distributions are used to evaluate the probabilities of certain temperature values occurring in one month or one year.  By calculating the probability of occurrence in one period, we can then use this as the p-value for the well-known geometric distribution, which can then be used to calculate the probability of the value's occurrence over multiple periods.
 
 Example: The probability of seeing a 100 degree day (or greater) at a location in one July is 25% (and thus the probability of not seeing its ocucurrence in one July is 75%).  Using the geometric distribution, the probability of seeing a 100 degree day at a location at least once in 5 July's is 1 - 0.75^5 (1 minus the probability of not seeing at all in each of the 5 years) is 76%.  This concept is used to calculate the 1-, 5-, 10-, 15-, 20-, and 25-year probabilities of the occurrence of extreme temperature values.
