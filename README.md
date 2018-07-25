@@ -16,7 +16,7 @@ Visual Studio 2017
 
 # Features
 
-#### Information in all screenshots below are relevant to station Orlando International Airport in Florida
+#### Orlando International Airport in Florida is the selected station for all screenshots below.
 
 ## Yearly and Monthly History Lookup
 ![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Historical%20Records.png)
