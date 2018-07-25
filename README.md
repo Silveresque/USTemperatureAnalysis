@@ -16,24 +16,34 @@ Visual Studio 2017
 
 # Features
 ## Yearly and Monthly History Lookup
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Historical%20Records.png)
 
 ## Record and Mean Extrema Tables
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Record%20and%20Mean%20Extrema%20Table.png)
 
 ## Percentile Tables
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Percentile%20Table.png)
 
 ## Daily Normals
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Daily%20Normals.png)
 
 ## Hourly Normals
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Hourly%20Normals.png)
 
 ## Probability of Extreme Temperatures
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Extreme%20Probabilities.png)
 
 ## Simulation of Maximum and Minimum Temperatures in a Month or Whole Year
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Simulation.png)
 
 ## Dew Point Annual Summary
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Dew%20Point%20Annual%20Table.png)
 
 ## Daily Dew Points
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Daily%20Dew%20Point.png)
 
 ## Hourly Dew Points
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Hourly%20Dew%20Point.png)
 
 ## Gumbel Distribution
 The gumbel probability distribution is used to evaluate probabilities and percentiles for maximums and minimums in a specific month or the whole year.  
