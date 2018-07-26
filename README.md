@@ -19,7 +19,7 @@ Visual Studio 2017
 #### Orlando International Airport in Florida is the selected station for all screenshots below.
 
 ## Yearly and Monthly History Lookup
-![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/Historical%20Records.png)
+![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/historical-records.png)
 
 ## Record and Mean Extrema Tables
 ![alt text](https://github.com/Silveresque/USTemperatureAnalysis/blob/master/Screenshots/mean-record-extrema-table.png)
