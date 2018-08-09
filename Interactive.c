@@ -66,7 +66,7 @@ void main_menu(void) {
 }
 
 void print_main_menu(void) {
-	printf("\nPlease enter an integer from 1 to 15 that corresponds to a choice in the menu.\n\n");
+	printf("\nPlease enter an integer from 1 to 14 that corresponds to a choice in the menu.\n\n");
 	printf("  1 - Specific Year's Temperatures Lookup\n");
 	printf("  2 - Specific Month's Temperatures Lookup\n");
 	printf("  3 - Temperature Averages and Records Annual Table\n");
@@ -830,12 +830,12 @@ int enter_temp_value(void) {
 int greater_or_less_than(void) {
 	char buffer[BUFFER];
 
-	printf("\n1 - Greather Than or Equal\n2 - Less Than\n");
+	printf("\n1 - Greater Than or Equal\n2 - Less Than\n");
 	fgets(buffer, BUFFER, stdin);
 
 	while (!is_int(buffer) || (to_int(buffer) != 1 && to_int(buffer) != 2)) {
 		printf("\nImproper input.");
-		printf("\n1 - Greather Than or Equal\n2 - Less Than\n");
+		printf("\n1 - Greater Than or Equal\n2 - Less Than\n");
 		fgets(buffer, BUFFER, stdin);
 	}
 
